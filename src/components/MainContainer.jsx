@@ -6,15 +6,15 @@ import { useState} from "react";
 
 //Gerenciamento de Perfis
 const MainContainer = () => {
-  const [components,setComponents] = useState(['Teste'])
+  const [components,setComponents] = useState([])
 
   function createElemente(){
-    setComponents([...components,'lucas'])
+    if(components.length<4){
+      setComponents([...components,'Luis'])
+    }else{
+      alert('Quantidade maxima de perfis criado')
+    }
   }
-
-
-
-
 
   return <div id="container">
     <div className="button-wrapper align-end">
